@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Ören 75nci Köyü</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/topBars.css">
+  <link rel="stylesheet" href="styles/sideBars.css">
+  <link rel="stylesheet" href="styles/textScreen.css">
+  <link rel="stylesheet" href="styles/imageScreen.css">
+  <style>
+     .foto {
+       display: flex;
+       position: fixed;
+       top: 155px;
+       left: 120px;
+        width: 100%;
+        height: 600px;
+
+       }
+
+  </style>
+  
+</head>
+
+<body style="height: 1000px; font-family: Arial;">
+
+  <div class="top-bar-grid" style="z-index: 400;">
+    <div class="first-top-bar-label">Arabo Köyü</div>
+
+   
+
+    <div class="second-top-bar-label">  
+
+      <div onclick="
+          Hakkında();
+        " class="top-bar-link "><img src="icons/hakkında.svg"><div>Hakkında</div></div>
+      <div onclick="
+          Tarihçe();
+      " class="top-bar-link"><img src="icons/tarihçe.svg"><div>Tarihçe</div></div>
+
+      <div onclick="
+        Konum();
+      " class="top-bar-link"><img src="icons/duyuru.svg"><div>Konum</div></div>
+
+      <div onclick="
+        Duyurular();
+      " class="top-bar-link"><img src="icons/haber.svg"><div>Duyurular</div> </div>
+
+      <div onclick="
+        İletişim();
+      " class="top-bar-link"><img src="icons/iletişim.svg"><div>İletişim</div></div>
+
+    </div>  
+  </div>  
+
+  <div class="side-bar-grid" style="z-index: 400;">  
+
+    <div onclick="
+      videoYukle()
+    
+      " class="side-bar-link js-side-bar-link"><img src="icons/video.svg"><div>Video</div></div>
+    
+    <div onclick="
+      fotografYukle()
+    " class="side-bar-link js-side-bar-link"><img src="icons/fotograf.svg"><div>Fotograf</div></div>
+    
+    
+    <div onclick="
+      muzikYukle()
+    
+    " class="side-bar-link js-side-bar-link"><img src="icons/müzik.svg"><div>Müzik</div> </div>
+    
+    
+    <div onclick="
+    
+    " class="side-bar-link js-side-bar-link"><img src="icons/etkinlik.svg"><div>Etkinlikler</div></div>
+    
+    
+    <div onclick="
+      Haberler();
+    
+    " class="side-bar-link js-side-bar-link"><img src="icons/hikaye.svg"><div>Haberler</div></div>
+    
+    
+    <div class="side-bar-link js-side-bar-link"><img src="icons/paylaşım.svg"><div>Sizden Gelen</div></div>
+  </div>
+
+  <div class="js-foto-div  foto" > </div>
+
+
+  <script>
+
+
+
+   function fotografYukle() {
+            
+        document.querySelector('.js-foto-div')
+        .innerHTML = `<img src="photo/myphoto.jpg" alt="Kendi fotoğrafım" width="90%" height="90%">`;
+    }
+
+    function videoYukle() {
+            
+        document.querySelector('.js-foto-div')
+        .innerHTML = `  <div style="padding-left: 5px; padding-rigt:5px" class="thumbnail-row">
+          <video width="400px" height="540px" controls>
+          <source src="video/IMG_2922.mp4">
+          `
+          ;
+
+
+    }
+
+    function Hakkında(){
+        document.querySelector(`.js-foto-div`).innerHTML = `
+
+        Yeni adı Uluçayır Mahallenin adı, 1928 yılı kayıtlarında Arabo olup, 
+        
+        Kürtçede "erebo" sözcüğü "Arapköy" anlamına gelmektediR. 
+        
+        Uluçayır, Erzurum ilinin Hınıs ilçesine bağlı bir kırsal mahalledir.
+        
+        Mahalle, Erzurum il merkezine 169 km, Hınıs ilçe merkezine 19 km uzaklıktadır. 
+        
+        Mahalle, Hınıs'ın güneydoğusunda olup, 6,7 km.'lik bir köy yoluyla, 25.50 numaralı 
+        
+        il yoluna Halilçavuş Mahalle si'nde ulaşmaktadır`;
+        
+    }
+
+    function Tarihçe(){
+        document.querySelector(`.js-foto-div`).innerHTML = `
+
+        Tarihçe
+
+        Mahallenin eski adı, 1928 yılı kayıtlarında Arabo olup, 
+
+        Kürtçede "erebo" sözcüğü "Arapköy" anlamına gelmektedir.
+
+        [ 1993 yılında Büyükşehir olan Erzurum’da, 2012 yılında 6360
+
+        Sayılı Yasa ile, tüm köylerin tüzel kişiliği kaldırılmıştır. 
+
+        Bu köy de Hınıs Belediyesi’nin bir mahallesi olmuştur.
+
+        Mikail GÜLLÜ.`;
+        
+    }
+
+    function Konum() {
+            
+            document.querySelector('.js-foto-div')
+            .innerHTML = `<img src="photo/Konum.png" alt="Kendi fotoğrafım" width="90%" height="90%">`;
+        }
+
+    function Duyurular(){
+        document.querySelector(`.js-foto-div`).innerHTML = ` 
+        Duyuru:
+
+        Köyde gerçekleşen son etkinlikler ve haberler:
+
+        15 Ağustos: Geleneksel Hasat Şenliği yapıldı.
+
+        10 Temmuz: Köy meydanındaki çeşme restore edildi.
+
+        25 Haziran: Gençler arasında futbol turnuvası düzenlendi..  `;
+        
+    }
+
+    function İletişim(){
+        document.querySelector(`.js-foto-div`).innerHTML = `
+        
+        Web Sayfası Tasarımı :Mikail Güllü
+
+      Telefon: +90 533 378 94 48
+
+      Email: mikailgullu22@gmail.com
+
+      Adres: İzmir.`;
+        
+    }
+
+    function Haberler(){
+        document.querySelector(`.js-foto-div`).innerHTML = `
+
+        lçeye bağlı Uluçayır Mahallesi'nde yaşayan Ö.Ç'nin (22) eve gelmemesi üzerine ailesi, 
+
+        İlçe Jandarma Karakol Komutanlığına giderek yardım istedi.
+
+        Müracaat üzerine harekete geçen İl Jandarma Komutanlığı Göçmen Kaçakçılığı ve İnsan Ticareti Şubesi, 
+        
+        Jandarma Arama Kurtarma Timi, İz Takip ve Arama Kurtarma Köpek Timi, Jandarma Asayiş Komando Timi, 
+        
+        Asayiş Timi, JASAT unsuru ve güvenlik korucuları olmak üzere 56 personel ve AFAD ekiplerinin katılımıyla çalışma başlatıldı.
+
+        Yapılan arama-tarama çalışmaları sonucu Ö.Ç, evinden 21 kilometre uzaklıktaki arazide bulundu.
+
+        Sağlık kontrolünden geçirilen genç ailesine teslim edildi.`;
+                
+    }
+
+
+
+  </script>
+
+  
+ 
+</body>
+</html>
